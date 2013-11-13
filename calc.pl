@@ -1,4 +1,7 @@
-  GNU nano 2.2.6                                 Файл: /home/calc.pl                                                                        
+   use 5.010;
+use strict;
+
+use warnings;                                                            
 
 $n1=$ARGV[0];
 $op=$ARGV[1];
