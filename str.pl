@@ -1,13 +1,20 @@
- #!/usr/bin/perl
+#!/usr/bin/perl
   use strict;
   use warnings;
-  use GetOpt :: Long ;
-GetOptions ("name" => \$name );
-print $name.length;
-  my @massiv = split(undef,$name);
- foreach my $symbol (@massiv) {
-$symbol = shift [@massiv];
- push ( @massiv,'$symbol' );
- say "@massiv";
+  use Getopt::Long ;
+  use feature 'say';
+  
+  my $name;
+  
+  GetOptions ("name=s" => \$name );
+  
+  if (defined($name)) {
+      say "String length: ".length ($name);
+      my @massiv = split("",$name);
+      foreach (@massiv) {
+          my $symbol = shift(@massiv);
+          push ( @massiv,$symbol );
+          say @massiv;
+      }
   }
   exit 0;
