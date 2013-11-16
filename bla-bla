@@ -11,6 +11,22 @@ open (MYFILE, '<input_file.txt'); ### открываем файл, записы�
 close (MYFILE);
 
 
+@text = split(//, "bitch");            #### divides text or something into elements // -but this shit have another 
+
+print "Field values are: @fields\n"      #### meaning too
+
+
+
+{                                     ##### this shit if put it into fileopening read the file in one strict 
+  undef(local $/);             
+  my $text = <FILE>;                  ### na zametku razobratsya s blyadstvom undef defined i prochaya huita
+}
+
+
+
+
+
+
 $h{$_}++ foreach @data;                #### по идее подсчитывает количество одинаковых элементов в массиве и делает хэш
 @k = keys %h; 
 say "$_ : $h{$_}" foreach (@k);
