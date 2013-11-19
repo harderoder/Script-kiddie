@@ -3,6 +3,11 @@ foreach $_(@array) {
 my $var ++ ;
 }
 
+my @text = split(//, "bitch biiihfrg"); #### ili tak? 
+
+my $var ++ foreach @text;
+my @k = keys my %var;
+say "$_ : $var" foreach (@k);
 
 
 
