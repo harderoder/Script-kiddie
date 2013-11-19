@@ -1,3 +1,15 @@
+my @array = split ( // , "text ebanniy"); ### tak ono shitaetsya?
+foreach $_(@array) {
+my $var ++ ;
+}
+
+
+
+
+
+
+
+
 my $s = "Testing one two three."; ### huinya schitivaet kol-vo poyavlenuy simvola e
 
 my $n = 0;
