@@ -1,0 +1,24 @@
+my $s = "Testing one two three."; ### huinya schitivaet kol-vo poyavlenuy simvola e
+
+my $n = 0;
+for (split //, $s) {
+  $n++ if $_ eq 'e';
+}
+
+
+
+# initialize hash of anonymous arrays                             #### guglil na english , tam byl pohozhiy primer
+my %arrays_for_i;
+foreach my $i (@possible_numbers) { $arrays_for_i{$i} = []; }
+
+open(DATA, "<$file");
+my @data = <DATA>;
+close(DATA);
+
+foreach my $line (@data) {
+  # check if line starts with a number
+  if ($line =~ /^(\d)/) {
+    # push line to the array
+    push(@{ $arrays_for_i{$1} }, $line);
+  }
+}
