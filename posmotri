@@ -1,0 +1,23 @@
+#!/usr/bin/perl
+open (FILE, 'input.txt');
+{
+  undef(local $/);
+  my $text = <FILE>;
+}
+close (FILE);
+
+my @list = split(//, $text);
+my %h;
+
+
+$h{$_}++ foreach (@list);
+
+
+foreach (keys %h) {
+          $_=$h{$_};
+}
+     
+     
+          foreach(sort {$h{$a} <=> $h{$b}} keys %h) {
+          print $_,'=',$h{$_},"\n";
+}
