@@ -1,5 +1,8 @@
 #!/usr/bin/perl
-open (FILE, 'input.txt');
+use Getopt::Long ;
+
+GetOptions ("name=s" => \$name );
+open FILE, ">", $name or die $!
 {
   undef(local $/);
   my $text = <FILE>;
