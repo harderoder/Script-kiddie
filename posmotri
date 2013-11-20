@@ -2,11 +2,11 @@
 use Getopt::Long ;
 
 GetOptions ("name=s" => \$name );
-open FILE, ">", $name or die $!
-{
+open FILE, ">", $name or die $!;
+
   undef(local $/);
   my $text = <FILE>;
-}
+
 close (FILE);
 
 my @list = split(//, $text);
