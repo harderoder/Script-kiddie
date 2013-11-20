@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 use Getopt::Long ;
-
+my $name;
 GetOptions ("name=s" => \$name );
 open FILE, ">", $name or die $!;
 
