@@ -1,4 +1,3 @@
-
     
 #!/usr/bin/perl
   use strict;
@@ -16,15 +15,10 @@ close FILE;
 my @list = split(//, $text);
 my %h;
 
-
-$h{$_}++ foreach (@list);
-
-
-foreach (keys %h) {
-          $_=$h{$_};
+ foreach (@list){
+    $h{$_}++ ;
 }
-     
-     
-          foreach(sort {$h{$b} <=> $h{$a}} keys %h) {
-          print $_,'=',$h{$_},"\n";
+
+ foreach(sort {$h{$b} <=> $h{$a}} keys %h) {
+     print $_,'=',$h{$_},"\n";
 }
