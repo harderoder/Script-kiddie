@@ -1,3 +1,31 @@
+use LWP::UserAgent;
+
+$bro = LWP::UserAgent->new();
+
+$url = "http://basik.ru/images/3d_autumn/short.jpg";
+$file = "short.jpg"; //под каким сохранять именем и куда
+
+$request = HTTP::Request->new(GET => $url);
+
+$bro->request($request, $file);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 my @array = split ( // , "text ebanniy"); ### tak ono shitaetsya?
 foreach $_(@array) {
 my $var ++ ;
