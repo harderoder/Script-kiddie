@@ -14,9 +14,9 @@ my $r = HTTP::Request->new(GET => "$url");
 my $response = $lwp->request($r);
 if ($response->is_success)
  {
-  print $response->content;
+     foreach (split(/\n/,$response->content)) {
+        $_ =~ /(http.+?.(jpg|png|gif))/ || next;
+        say $1;
+     }
  }
-else
- {
-  print $response->error_as_HTML;
- }
+
